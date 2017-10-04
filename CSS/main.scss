@@ -9,15 +9,24 @@ html{
 }
 
 body{
+  //Structure
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+
+  //Background
   background-image: url(https://static.pexels.com/photos/12255/pexels-photo-12255.jpeg);
   background-position: center;
   background-size: cover;
+
+  //Text
   text-align: center;
-  vertical-align: middle;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+
+  //Font
   color: white;
   font-family: Raleway;
   font-size: 50px;
