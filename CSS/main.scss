@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
-.construction{
+html, body{
   margin: 0;
   padding: 0;
-  position: absolute;
-  background-image: url('../images/construction.jpg');
-  background-size: cover;
-  top: 0px;
-  bottom: 0px;
+  height: 100%;
   width: 100%;
-  text-align: center;
-  font-size: 50px;
+}
+
+.construction{
+  height: 100%;
+  width: 100%;
+  margin:auto;
+  background-image: url(https://static.pexels.com/photos/12255/pexels-photo-12255.jpeg);
 }
