@@ -23,10 +23,12 @@ html, body{
 }
 
 .content{
+  margin: 0;
+  padding: 0;
   max-width: 500px;
   text-align: center;
 }
 
-h1{
-  
+.content h1{
+  font-family: Raleway;
 }
