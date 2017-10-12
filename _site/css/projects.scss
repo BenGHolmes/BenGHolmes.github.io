@@ -9,13 +9,21 @@ html, body{
   overflow: hidden;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 #top-bar{
-  height: 100%;
+  height: auto;
   width: 100%;
   text-align: center;
   color: white;
-  background-color: #cccccc;
+  background-color: #333333;
   background-size: cover;
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -29,7 +37,7 @@ a{
   padding: 0;
   height: 40px;
   width: 100%;
-  background-color: rgba(0,0,0,0.2);
+  background-color: #333333;
   display: block;
   overflow: hidden;
 }
@@ -71,7 +79,7 @@ padding: 0;
     text-align: center;
     height: 100%;
     font-size: 20px;
-    color: white;
+    color: #999999;
     font-family: Raleway;
     padding: 14px 16px;
     margin-left: 1px;
@@ -79,13 +87,34 @@ padding: 0;
     text-decoration: none;
   }
 
-  .current a{
-    background-color: #b4c6e7;
-    color: black;
-  }
-
   a:hover{
-    background-color: #b4c6e7;
-    color: black;
+    color: white;
   }
+}
+
+#projects{
+  margin-top: 40px;
+  height: 100%;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.project-container{
+  max-width: 100%;
+  height: auto;
+  padding: 40px 96px;
+}
+
+#project-test{
+  font-size: 32px;
+  background-color: #b4c6e7;
+  margin: 0px;
+  position: relative;
+}
+
+#project-test-2{
+  font-size: 32px;
+  margin: 0px;
+  position: relative;
+  background-color: #42f4a1;
 }
