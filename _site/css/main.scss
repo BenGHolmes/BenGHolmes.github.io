@@ -6,13 +6,15 @@ html, body{
   padding: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../images/vancouver-mountain-skyline.jpg);
-  background-color: #cccccc;
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-bar{
@@ -20,10 +22,13 @@ html, body{
   padding: 0;
   height: 40px;
   width: 100%;
-  background-color: rgba(0,0,0,0.2);
+  background-color: #333333;
   display: block;
+  position: fixed;
+  top: 0;
   overflow: hidden;
   color: white;
+  z-index: 1;
 }
 
 .site-title{
@@ -82,10 +87,23 @@ html, body{
   }
 }
 
+.landing{
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/vancouver-mountain-skyline.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
 .greeting{
   display: block;
   position: relative;
-  margin-top: 75px;
+  top: 75px;
 }
 
 .name{
