@@ -112,3 +112,45 @@ a{
   padding: 0;
   margin: 0;
 }
+
+.section-container{
+  padding-top: 56px;
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
+.project{
+  padding: 32px;
+}
+
+.about-body{
+  margin: 0px 16px;
+  display: flex;
+  height:auto;
+  min-height: 150px;
+}
+
+.headshot{
+  background-image: url(../images/headshot.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  min-width: 150px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+h1{
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  padding: 0px 16px;
+}
+
+#project1{
+}
+
+#project2{
+}
