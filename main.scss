@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 html, body{
+  font-family: "Arial";
   margin: 0;
   padding: 0;
   height: 100%;
@@ -15,6 +16,11 @@ html, body{
 a{
   text-decoration: none;
   color: inherit;
+}
+
+i{
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .nav-bar{
@@ -83,7 +89,7 @@ a{
 .landing{
   height: 100%;
   width: 100%;
-  background-image: url(../images/vancouver-mountain-skyline.jpg);
+  background-image: url(images/vancouver-mountain-skyline.jpg);
   background-color: #cccccc;
   background-size: cover;
   background-repeat: no-repeat;
@@ -113,31 +119,29 @@ a{
   margin: 0;
 }
 
+.contact{
+  position: absolute;
+  bottom: 0;
+  font-size: 35px;
+  padding: 8px;
+  margin: 0;
+  float: bottom;
+  text-align: right;
+}
+
 .section-container{
   padding-top: 56px;
   margin-left: 128px;
   margin-right: 128px;
+  min-height: 100%;
 }
 
 .project{
   padding: 32px;
 }
 
-.about-body{
-  margin: 0px 16px;
-  display: flex;
-  height:auto;
-  min-height: 150px;
-}
-
-.headshot{
-  background-image: url(../images/headshot.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  min-height: 150px;
-  min-width: 150px;
-  align-items: center;
-  margin-top: 16px;
+.about-text{
+  font-size: 20px;
 }
 
 h1{
@@ -147,6 +151,7 @@ h1{
 
 p{
   padding: 0px 16px;
+  letter-spacing: 1.4px;
 }
 
 #project1{
