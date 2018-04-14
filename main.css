@@ -98,11 +98,33 @@ i {
   margin: 0;
 }
 
-.greeting {
-  display: block;
-  position: relative;
-  top: 75px;
+@media only screen and (max-width: 400px) {
+  .greeting {
+    display: block;
+    position: relative;
+    top: 16vh;
+  }
 }
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 1050px) {
+  .greeting {
+    display: block;
+    position: relative;
+    top: 10vh;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1050px) {
+  .greeting {
+    display: block;
+    position: relative;
+    top: 16vh;
+  }
+}
+
+
 
 .name {
   font-size: 70px;
