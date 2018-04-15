@@ -157,6 +157,7 @@ i {
 
 .about-text {
   font-size: 20px;
+  color: white;
 }
 
 #key-chain {
@@ -180,4 +181,10 @@ p {
   padding: 0px 16px;
   letter-spacing: 1.4px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.anchor{
+  display:block;
+  height:44px; /* this is the height of your header */
+  margin-top:-44px; /* this is again negative value of the height of your header */
+  visibility:hidden;
+}
