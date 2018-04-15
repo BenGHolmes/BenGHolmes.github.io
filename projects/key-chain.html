@@ -10,20 +10,20 @@
                 Given some recent security issues surrounding online password managers, I decided to build my own solution that offered much
                 more security without sacrificing the ability to conveniently auto-fill login pages. Inspired by the id card
                 that my doctor uses to sign into her computer at work, I decided to build a hardware solution to this problem,
-                and ended up settling on an arduino based USB stick. The USB stick is small enough to be kept in a pocket,
-                so it is always with me, and the passwords are safely stored offline in the arduino's EEPROM memory.
+                and ended up settling on an Arduino-based USB stick. The USB stick is small enough to be kept in a pocket,
+                so it is always with me, and the passwords are safely stored offline in the Arduino's EEPROM memory.
             </p>
             <p>
                 When the USB is plugged into a computer, I can select a login from the list of stored sites by using a directional pad
                 on the device. While scrolling, the names of the sites stored on the device will be shown on a small OLED
                 display on top of the device. Once the correct site is found, I can choose to display the password on the
                 screen, or automatically fill the username, or password, or both. If I choose to automatically fill the
-                username and/or password, the arduino emmulates a keyboard in order to enter the username and password for
+                username and/or password, the Arduino emmulates a keyboard in order to enter the username and password for
                 the selcted site.
             </p>
             <p>
-                Currently, the only way to add new logins or update existing ones is using a python script that I wrote, but I am planning
-                to create a chrome extension or app that uses the chrome serial api to update the device.
+                Currently, login information can be added or updated using a Python script that I wrote, but I am planning
+                to create a Chrome extension or app that uses the chrome.serial API to update the device.
             </p>
 
         </div>
