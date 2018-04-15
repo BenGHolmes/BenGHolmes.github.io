@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html, body{
+  font-family: "Arial";
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+i{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.nav-bar{
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #333333;
+  display: block;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.site-title{
+  height: 100%;
+  display: flex;
+  float: left;
+  align-items: center;
+  color: white;
+  font-family: Raleway;
+  font-size: 30px;
+  padding-left: 16px;
+  text-align: left;
+}
+
+.menu-buttons{
+  margin: 0;
+  min-height: 100%;
+  display: block;
+  float: right;
+  vertical-align: middle;
+  text-align: right;
+  padding: 0;
+
+  ul{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+
+  li a{
+    float: right;
+    display: block;
+    text-align: center;
+    height: 100%;
+    font-size: 20px;
+    color: #999999;
+    font-family: Raleway;
+    padding: 14px 16px;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: white;
+  }
+}
+
+.landing{
+  height: 100%;
+  width: 100%;
+  background-image: url(images/tents.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.greeting{
+  display: block;
+  position: relative;
+  top: 75px;
+}
+
+.name{
+  font-size: 70px;
+  padding: 0;
+  margin: 0;
+}
+
+.education{
+  display: inline-block;
+  font-size: 35px;
+  max-width: 700px;
+  padding: 0;
+  margin: 0;
+}
+
+.contact{
+  position: absolute;
+  bottom: 0;
+  font-size: 35px;
+  padding: 8px;
+  margin: 0;
+  float: bottom;
+  text-align: right;
+}
+
+.section-container{
+  padding-top: 56px;
+  margin-left: 128px;
+  margin-right: 128px;
+  min-height: 100%;
+}
+
+.project{
+  padding: 32px;
+}
+
+.about-text{
+  font-size: 20px;
+}
+
+h1{
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  padding: 0px 16px;
+  letter-spacing: 1.4px;
+}
+
+#project1{
+}
+
+#project2{
+}

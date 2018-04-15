@@ -1,0 +1,27 @@
+<div style="background-color: rgb(201, 151, 94); padding: 72px;">
+    <h1 style="color:white;">Self Driving RC Car</h1>
+    <h2 style="color: white;">Teaching a Car to Drive Itself</h2>
+
+    <div style="margin-top: 32px;">
+        <div class="div-image">
+            <img src="Images/donkey-car.png" alt="Self Driving RC" style="width: 100%;">
+        </div>
+        <div class="div-text">
+            <p>
+                Lately, I've been fascinated with machine learning, and I've been looking for a poject that will let me learn the basics
+                of it. While researching possible projects, I found a well-documented self-driving car platform called Donkey
+                Car, and based my project on this. The brains of the car is a Raspberry Pi, and the steering and throttle
+                are controlled by a set of 4 relays.
+            </p>
+            <p>
+                Currently, I am able to drive the car from my laptop using the arrow keys by recording the inputs, and sending them to the
+                car's Raspberry Pi through a RabbitMQ queue. As I continue to work on this project, I plan to add a wide-angle
+                fisheye lens and feed the images into a neural network in order to have the car drive itself. Similar to
+                the Donkey Car projects, I plan to train the neural net by having it observe me driving several laps of a
+                track. After processing the video of my laps, I will have a model that attempts to emmulate my driving. From
+                there, I plan to create new models for different tasks such as object avoidance and localization that allows
+                the car to figure out which room of my house it's currently in.
+            </p>
+        </div>
+    </div>
+</div>
