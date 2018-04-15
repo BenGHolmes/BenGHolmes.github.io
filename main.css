@@ -97,6 +97,7 @@ i {
   margin: 0;
 }
 
+/* Mobile Styles */
 @media only screen and (max-width: 400px) {
   .greeting {
     display: block;
@@ -104,14 +105,14 @@ i {
     top: 16vh;
   }
 
-  .about-image {
+  .div-image {
     margin: auto;
     display: block;
     width: 50vw;
     margin-top: 20px;
   }
   
-  .about-text {
+  .div-text {
     display: block;
     font-size: 20px;
     color: white;
@@ -126,7 +127,7 @@ i {
     top: 12vh;
   }
 
-  .about-image {
+  .div-image {
     margin: auto;
     display: block;
     align-self: center;
@@ -134,7 +135,7 @@ i {
     margin-top: 20px;
   }
   
-  .about-text {
+  .div-text {
     display: block;
     font-size: 3vw;
     color: white;
@@ -149,13 +150,13 @@ i {
     top: 17vh;
   }
 
-  .about-image {
+  .div-image {
     display: inline-block;
     width: 35%;
     margin-top: 20px;
   }
   
-  .about-text {
+  .div-text {
     display: inline-block;
     vertical-align: top;
     width: 60%;
