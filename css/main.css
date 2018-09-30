@@ -53,7 +53,6 @@ i {
   min-height: 100%;
   display: block;
   float: right;
-  vertical-align: middle;
   text-align: right;
   padding: 0;
 }
@@ -77,11 +76,12 @@ i {
   color: #999999;
   font-family: Raleway;
   margin-right:24px;
-  text-decoration: none;
+  border-bottom: 2px solid #999999;
 }
 
 .menu-buttons a:hover {
   color: #F6C38A;
+  border-bottom: 3px solid #F6C38A;
 }
 
 .landing {
@@ -225,8 +225,8 @@ p {
 }
 
 .active{
-    color:#F6C38A !important;
- }
+  border-bottom: 3px solid #F6C38A !important;
+}
 
 .anchor{
   display:block;
