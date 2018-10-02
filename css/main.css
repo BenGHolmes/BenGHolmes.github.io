@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.come/css?family=Oswald');
 
 :root {
-  --background: #FFF;
+  --background: #062f4f;
+  --section-background: #fff;
   --nav-background: rgba(0,0,0,0.7);
   --intro-text: #FFF;
   --menu-text: #FFF;
-  --menu-text-highlight: red;
+  --menu-text-highlight: #B82601;
 }
 
 html, body {
@@ -80,4 +81,14 @@ html, body {
   text-align: center;
   color: var(--intro-text);
   font-size: 24px;
+}
+
+section {
+  background: var(--background);
+  padding: 16px;
+}
+
+.section-inner {
+  background: var(--section-background);
+  margin: 16px;
 }
