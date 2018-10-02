@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.come/css?family=Raleway');
+@import url('https://fonts.googleapis.come/css?family=Oswald');
+
+:root {
+  --background: #FFF;
+  --nav-background: rgba(0,0,0,0.7);
+  --intro-text: #FFF;
+  --menu-text: #FFF;
+  --menu-text-highlight: red;
+}
+
+html, body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.nav-colored {
+  background-color: var(--nav-background);
+}
+.nav-transparent {background-color: transparent;}
+
+.navbar a {
+  float: right;
+  text-decoration: none;
+  color: var(--menu-text);
+  display: block;
+  text-align: center;
+  margin: 14px;
+  font-size: 24px;
+}
+
+.navbar .navBtn {
+  border-bottom: 2px solid var(--menu-text);
+}
+
+.navbar .navBtn:hover {
+  color: var(--menu-text-highlight);
+  border-bottom: 3px solid var(--menu-text-highlight);
+}
+
+.navbar #name {
+  font-size: 32px;
+  color: var(--menu-text-highlight);
+  float: left;
+}
+
+.intro {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background: url(../Images/landing.jpg) no-repeat 50% 50%;
+  display: table;
+  top: 0;
+  background-size: cover;
+}
+
+.intro .inner {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+  max-width: none;
+}
+
+.content {
+  max-width: 700px;
+  padding-bottom: 100px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--intro-text);
+  font-size: 24px;
+}
