@@ -1,5 +1,6 @@
 var navbar; 
 var nav_height;
+var animating = false;
 
 window.onload = function() {
   navbar = document.getElementById("navbar")
@@ -18,13 +19,17 @@ window.onscroll = function() {
     clear_navbar();
   }
 
-  var sections = document.getElementsByTagName("section");
-  for (var i = 0; i < sections.length; i++){
-    var x = sections[i];
-      clear_active();
-      if (x.getBoundingClientRect().top - nav_height <= 0) {
-        document.getElementById(x.id+"Btn").classList.add("active");
-      }
+  if (!animating){
+    var current;
+    var sections = document.getElementsByTagName("section");
+    for (var i = 0; i < sections.length; i++){
+      var x = sections[i];
+        if (x.getBoundingClientRect().top - nav_height <= 0) {
+          current = x;
+        }
+    }
+    clear_active();
+    if (current) document.getElementById(current.id+"Btn").classList.add("active");
   }
 }
 
@@ -44,13 +49,15 @@ function goto(section_name){
   if (section_name == 'top'){
       $('html,body').animate({ scrollTop: 0 }, 400);
   } else {
+    animating = true;
     var section_top = document.getElementById(section_name).getBoundingClientRect().top;
     var btn = document.getElementById(section_name+"Btn");
     clear_active();
     btn.classList.add("active");
-    $('html,body').animate({ scrollTop: window.scrollY +  section_top - nav_height}, 400);
+    $('html,body').animate({ scrollTop: window.scrollY +  section_top - nav_height}, 400, function() {
+      animating = false;
+    });
   }
-  
 }
 
 function clear_active(){
