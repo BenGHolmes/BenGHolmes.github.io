@@ -4,29 +4,43 @@
   <title>Ben Holmes</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="navbar" id="navbar">
-    <a id="name" href="#top">Ben Holmes</a>
-    <a class="navBtn" href="#experience">Where I've worked</a>
-    <a class="navBtn" href="#projects">What I've done</a>
-    <a class="navBtn" href="#whoami">Who I am</a>
+    <a id="name" onclick="goto('top')">Ben Holmes</a>
+    <a class="navBtn" id="experienceBtn" onclick="goto('experience')">Where I've worked</a>
+    <a class="navBtn" id="projectsBtn" onclick="goto('projects')">What I've done</a>
+    <a class="navBtn" id="whoamiBtn" onclick="goto('whoami')">Who I am</a>
   </div>
-  <section class="intro">
+  <div class="intro">
     <div class="inner">
       <div class="content">
         Engineering Physics student at the University of British Columbia, intersted in physics and astronomy research and software development.
       </div>
     </div>
-  </section>
+  </div>
   <section id="whoami">
     <div class="section-inner">
+      <h1>Who I am</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dolor leo, rutrum vel porttitor mattis, pellentesque a sem. Praesent dapibus quis purus in faucibus. Mauris fringilla dui augue, vitae efficitur orci condimentum sit amet. Duis consequat ligula purus, eget rhoncus tortor dignissim ut. Nulla vel massa vitae orci vulputate aliquam. Nam mattis augue nec mi lacinia, sit amet feugiat nibh egestas. Sed faucibus libero a nulla accumsan maximus. Suspendisse ut condimentum tellus. Sed porta mi dui, fringilla euismod neque placerat nec. Aenean vel rhoncus lectus. Vestibulum ut aliquet sem. Vivamus pharetra lobortis tortor, ac semper tortor auctor ac. Maecenas feugiat, sem a gravida imperdiet, risus leo sodales orci, at fringilla metus nunc sed arcu.
       </p>
     
       <p>
         Vestibulum condimentum sed tellus et luctus. Mauris nisi est, varius id aliquam non, pretium id urna. Vivamus pellentesque laoreet magna et dignissim. Cras vulputate, nulla sed rutrum euismod, ipsum mi semper ante, id iaculis sem massa nec nisl. Sed fermentum massa in aliquam luctus. Mauris posuere ex id augue tempus faucibus. In hac habitasse platea dictumst.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et aliquam enim, sit amet aliquam nisi. Nulla a elementum turpis. Phasellus quis ultricies felis, ut molestie lectus. Suspendisse sed velit tincidunt, tristique est ac, feugiat quam. Nullam dictum luctus accumsan. In lacinia lectus ex, at dapibus dui faucibus sed. Curabitur semper sit amet dolor sagittis ultrices.
+      </p>
+
+      <p>
+        Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus ligula.
+      </p>
+
+      <p>
+        Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus varius, id porta lacus feugiat. Nullam vel metus eros.
       </p>
     </div> 
   </section>
