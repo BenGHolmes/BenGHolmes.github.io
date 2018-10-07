@@ -22,26 +22,21 @@
   </div>
   <section id="whoami">
     <h1>Who I am</h1>
-    <div class="section-inner">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dolor leo, rutrum vel porttitor mattis, pellentesque a sem. Praesent dapibus quis purus in faucibus. Mauris fringilla dui augue, vitae efficitur orci condimentum sit amet. Duis consequat ligula purus, eget rhoncus tortor dignissim ut. Nulla vel massa vitae orci vulputate aliquam. Nam mattis augue nec mi lacinia, sit amet feugiat nibh egestas. Sed faucibus libero a nulla accumsan maximus. Suspendisse ut condimentum tellus. Sed porta mi dui, fringilla euismod neque placerat nec. Aenean vel rhoncus lectus. Vestibulum ut aliquet sem. Vivamus pharetra lobortis tortor, ac semper tortor auctor ac. Maecenas feugiat, sem a gravida imperdiet, risus leo sodales orci, at fringilla metus nunc sed arcu.
-      </p>
-    
-      <p>
-        Vestibulum condimentum sed tellus et luctus. Mauris nisi est, varius id aliquam non, pretium id urna. Vivamus pellentesque laoreet magna et dignissim. Cras vulputate, nulla sed rutrum euismod, ipsum mi semper ante, id iaculis sem massa nec nisl. Sed fermentum massa in aliquam luctus. Mauris posuere ex id augue tempus faucibus. In hac habitasse platea dictumst.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et aliquam enim, sit amet aliquam nisi. Nulla a elementum turpis. Phasellus quis ultricies felis, ut molestie lectus. Suspendisse sed velit tincidunt, tristique est ac, feugiat quam. Nullam dictum luctus accumsan. In lacinia lectus ex, at dapibus dui faucibus sed. Curabitur semper sit amet dolor sagittis ultrices.
-      </p>
-
-      <p>
-        Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus ligula.
-      </p>
-
-      <p>
-        Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus varius, id porta lacus feugiat. Nullam vel metus eros.
-      </p>
+    <div class="section-inner flex-section">
+      <div class="image">
+        <img src="Images/Headshot.jpeg">
+      </div>
+      <div class="text">
+        <p>
+          Hi, I'm Ben. I'm a third year Engineering Physics student at the University of British Columbia in Vancouver, Canada. I have a passion for physics, software development, and math, and with my endless curiosity and love for problem solving, I hope to build a career in research and academia. I have taken my first step in this direction by pursuing a degree in Engineering Physics, an extremely competitive program that focuses on developing a foundation of high level math and physics knowledge, while also allowing me to customize my degree with a wide range of technical electives. 
+        </p>
+        <p>
+          Recently, my main interest has been in the areas of theoretical physics, computational physics, and astronomy. I've recently taken courses in both quantum mechanics and special relativity, and they have been by far the most enjoyable courses of my degree. I hope to get more experience in physics research over the coming years to help me narrow down my areas of interest and guide my degree moving forwards.
+        </p>
+        <p>
+          In what little free time I have between classes and extracurricular projects, I'm an avid climber, skier, and backpacker, and I dabble in biking, running and photography.
+        </p>
+      </div>
     </div> 
   </section>
   <section id="projects">
@@ -49,13 +44,19 @@
     <div class="section-inner" id="vanessa">
       <h2>Autonomous Rescue Robot with Computer Vision</h2>
       <h3>Course project (June - Aug 2018)</h3>
-      <p>
-          Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus ligula.
-        </p>
-  
-        <p>
-          Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus varius, id porta lacus feugiat. Nullam vel metus eros.
-        </p>
+      <div class="flex-section">
+        <div class="image">
+          <video src="Images/best_run.mp4" type="video/mp4" controls="true"></video>
+        </div>
+        <div class="text">
+          <p>
+            During this past summer, I was lucky enough to participate in the yearly Engineering Physics robot design course. The course is structured as a competition, with the goal being to build a fully autonomous robot that is able to complete the given challenge in just 13 weeks. This year, we had to rescue Ewoks (stuffed animals) from the Empire stronghold by navigating over gaps, differentiating between various infrared light signals, and detecting and capturing 5 stuffed Ewoks along the way.
+          </p>
+          <p>
+            From the beginning, our team decided that we wanted to try to implement a universal solution, that required no hardcoding or prior knowledge of the course. If successful, our robot would be able to navigate any similar style of course, even if the specific obstacles changed. My main contribution was implementing a computer vision system that allowed us to do exactly that. A Raspberry Pi on the robot continuously captured images of the course ahead using a fisheye camera, and these photos were processed using a Python implementation of the extremely fast <a href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi. The raspberry pi would then calculate how much the robot needed to turn in order to face the Ewok, and then pass this information to our main STM32 microcontroller, which controlled the motors.
+          </p>
+        </div>
+      </div>
     </div>
     <div class="section-inner" id="ball-sim">
       <h2>Ball Bouncing in a Ball Motion Simulation</h2>
