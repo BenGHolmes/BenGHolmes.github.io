@@ -52,14 +52,17 @@ function toggleDropdown(){
   let dropdown = document.getElementById("dropdownMenu");
   if (dropdown.classList.contains("hidden")){
     dropdown.classList.remove("hidden");
-    dropdown.style.top = nav_height + "px";
+    solid_navbar();
+    dropdown.style.top = (nav_height) + "px";
   } else {
     dropdown.classList.add("hidden");
+    if (window.scrollY < 100) {clear_navbar();}
   }
 }
 
 function goto(section_name){
   if (section_name == 'top'){
+      document.getElementById("dropdownMenu").classList.add("hidden");
       $('html,body').animate({ scrollTop: 0 }, 400);
   } else {
     animating = true;
