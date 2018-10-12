@@ -1,99 +1,163 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Ben Holmes</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="js/main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Ben Holmes</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="navbar" id="navbar">
+<div class="navbar" id="navbar">
     <a id="name" onclick="goto('top')">Ben Holmes</a>
     <a class="navBtn" id="experienceBtn" onclick="goto('experience')">Where I've worked</a>
     <a class="navBtn" id="projectsBtn" onclick="goto('projects')">What I've done</a>
     <a class="navBtn" id="whoamiBtn" onclick="goto('whoami')">Who I am</a>
-  </div>
-  <div class="intro">
+    <a onclick="toggleDropdown()"><i id="burgerMenu" class="fas fa-bars"></i></a>
+</div>
+<div class="dropdownMenu hidden" id="dropdownMenu">
+    <a class="dropdownBtn" id="whoamiDropdown" onclick="dropdownGoto('whoami')">Who I am</a>
+    <a class="dropdownBtn" id="projectsDropdown" onclick="dropdownGoto('projects')">What I've done</a>
+    <a class="dropdownBtn" id="experienceDropdown" onclick="dropdownGoto('experience')">Where I've worked</a>
+</div>
+<div class="intro">
     <div class="inner">
-      <div class="content">
-        Engineering Physics student at the University of British Columbia, intersted in physics and astronomy research and software development.
-      </div>
+        <div class="content">
+            Engineering Physics student at the University of British Columbia, intersted in physics and astronomy
+            research and software development.
+        </div>
     </div>
-  </div>
-  <section id="whoami">
+</div>
+<section id="whoami">
     <h1>Who I am</h1>
     <div class="section-inner flex-section">
-      <div class="image">
-        <img src="Images/Headshot.jpeg">
-      </div>
-      <div class="text">
-        <p>
-          Hi, I'm Ben. I'm a third year Engineering Physics student at the University of British Columbia in Vancouver, Canada. I have a passion for physics, software development, and math, and with my endless curiosity and love for problem solving, I hope to build a career in research and academia. I have taken my first step in this direction by pursuing a degree in Engineering Physics, an extremely competitive program that focuses on developing a foundation of high level math and physics knowledge, while also allowing me to customize my degree with a wide range of technical electives. 
-        </p>
-        <p>
-          Recently, my main interest has been in the areas of theoretical physics, computational physics, and astronomy. I've recently taken courses in both quantum mechanics and special relativity, and they have been by far the most enjoyable courses of my degree. I hope to get more experience in physics research over the coming years to help me narrow down my areas of interest and guide my degree moving forwards.
-        </p>
-        <p>
-          In what little free time I have between classes and extracurricular projects, I'm an avid climber, skier, and backpacker, and I dabble in biking, running and photography.
-        </p>
-      </div>
-    </div> 
-  </section>
-  <section id="projects">
-    <h1>Projects</h1>
-    <div class="section-inner" id="vanessa">
-      <h2>Autonomous Rescue Robot with Computer Vision</h2>
-      <h3>Course project (June - Aug 2018)</h3>
-      <div class="flex-section">
         <div class="image">
-          <video src="Images/best_run.mp4" type="video/mp4" controls="true"></video>
+            <img src="Images/Headshot.jpeg">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/bengholmes/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BenGHolmes" target="_blank"><i class="fab fa-github-square"></i></a>
+            </div>
         </div>
         <div class="text">
-          <p>
-            During this past summer, I was lucky enough to participate in the yearly Engineering Physics robot design course. The course is structured as a competition, with the goal being to build a fully autonomous robot that is able to complete the given challenge in just 13 weeks. This year, we had to rescue Ewoks (stuffed animals) from the Empire stronghold by navigating over gaps, differentiating between various infrared light signals, and detecting and capturing 5 stuffed Ewoks along the way.
-          </p>
-          <p>
-            From the beginning, our team decided that we wanted to try to implement a universal solution, that required no hardcoding or prior knowledge of the course. If successful, our robot would be able to navigate any similar style of course, even if the specific obstacles changed. My main contribution was implementing a computer vision system that allowed us to do exactly that. A Raspberry Pi on the robot continuously captured images of the course ahead using a fisheye camera, and these photos were processed using a Python implementation of the extremely fast <a href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi. The raspberry pi would then calculate how much the robot needed to turn in order to face the Ewok, and then pass this information to our main STM32 microcontroller, which controlled the motors.
-          </p>
+            <p>
+                Hi, I'm Ben. I'm a third year Engineering Physics student at the University of British Columbia in
+                Vancouver, Canada. I have a passion for physics, software development, and math, and with my endless
+                curiosity and love for problem solving, I hope to build a career in research and academia. I have taken
+                my first step in this direction by pursuing a degree in Engineering Physics, an extremely competitive
+                program that focuses on developing a foundation of high level math and physics knowledge, while also
+                allowing me to customize my degree with a wide range of technical electives.
+            </p>
+            <p>
+                Recently, my main interest has been in the areas of theoretical physics, computational physics, and
+                astronomy. I've recently taken courses in both quantum mechanics and special relativity, and they have
+                been by far the most enjoyable courses of my degree. I hope to get more experience in physics research
+                over the coming years to help me narrow down my areas of interest and guide my degree moving forwards.
+            </p>
+            <p>
+                In what little free time I have between classes and extracurricular projects, I'm an avid climber,
+                skier, and backpacker, and I dabble in biking, running and photography.
+            </p>
         </div>
-      </div>
+    </div>
+</section>
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="section-inner" id="vanessa">
+        <h2>Autonomous Rescue Robot with Computer Vision</h2>
+        <h3>Course project (June - Aug 2018)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <video src="Images/best_run.mp4" type="video/mp4" controls="true"></video>
+            </div>
+            <div class="text">
+                <p>
+                    During this past summer, I was lucky enough to participate in the yearly Engineering Physics robot
+                    design course. The course is structured as a competition, with the goal being to build a fully
+                    autonomous robot that is able to complete the given challenge in just 13 weeks. This year, we had to
+                    rescue Ewoks (stuffed animals) from the Empire stronghold by navigating over gaps, differentiating
+                    between various infrared light signals, and detecting and capturing 5 stuffed Ewoks along the way.
+                </p>
+                <p>
+                    From the beginning, our team decided that we wanted to try to implement a universal solution, that
+                    required no hardcoding or prior knowledge of the course. If successful, our robot would be able to
+                    navigate any similar style of course, even if the specific obstacles changed. My main contribution
+                    was implementing a computer vision system that allowed us to do exactly that. A Raspberry Pi on the
+                    robot continuously captured images of the course ahead using a fisheye camera, and these photos were
+                    processed using a Python implementation of the extremely fast <a
+                        href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi.
+                    The raspberry pi would then calculate how much the robot needed to turn in order to face the Ewok,
+                    and then pass this information to our main STM32 microcontroller, which controlled the motors.
+                </p>
+            </div>
+        </div>
     </div>
     <div class="section-inner" id="ball-sim">
-      <h2>Ball Bouncing in a Ball Motion Simulation</h2>
-      <h3>Personal project</h3>
-      <p>
-          Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus ligula.
-        </p>
-  
+        <h2>Ball Bouncing in a Ball Motion Simulation</h2>
+        <h3>Personal project</h3>
         <p>
-          Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus varius, id porta lacus feugiat. Nullam vel metus eros.
+            Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta
+            porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget
+            lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis
+            tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at
+            nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus
+            ligula.
+        </p>
+
+        <p>
+            Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis
+            vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna
+            lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut
+            dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique
+            suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus
+            varius, id porta lacus feugiat. Nullam vel metus eros.
         </p>
     </div>
     <div class="section-inner" id="study-app">
-      <h2>UBC Solar</h2>
-      <h3>Engineering student design team (Sept 2016 - Sept 2017)</h3>
-      <p>
-          Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus ligula.
-        </p>
-  
+        <h2>UBC Solar</h2>
+        <h3>Engineering student design team (Sept 2016 - Sept 2017)</h3>
         <p>
-          Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus varius, id porta lacus feugiat. Nullam vel metus eros.
+            Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta
+            porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget
+            lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis
+            tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at
+            nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus
+            ligula.
+        </p>
+
+        <p>
+            Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis
+            vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna
+            lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut
+            dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique
+            suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus
+            varius, id porta lacus feugiat. Nullam vel metus eros.
         </p>
     </div>
-  </section>
-  <section id="experience">
+</section>
+<section id="experience">
     <h1>Work Experience</h1>
     <div class="section-inner" id="blue-willow">
-      <h2>Blue Willow Systems</h2>
-      <h3>Co-op Software Devloper (Jan - Apr 2018)</h3>
-      <p>
-          Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus ligula.
-        </p>
-  
+        <h2>Blue Willow Systems</h2>
+        <h3>Co-op Software Devloper (Jan - Apr 2018)</h3>
         <p>
-          Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus varius, id porta lacus feugiat. Nullam vel metus eros.
+            Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta
+            porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget
+            lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis
+            tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at
+            nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus
+            ligula.
+        </p>
+
+        <p>
+            Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis
+            vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna
+            lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut
+            dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique
+            suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus
+            varius, id porta lacus feugiat. Nullam vel metus eros.
         </p>
     </div>
-  </section>
+</section>
 </body>
 </html>
