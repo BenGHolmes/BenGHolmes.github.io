@@ -235,6 +235,11 @@ h3 {
   display: none !important;
 }
 
+.background{
+  padding: 4px;
+  background: #aaa;
+}
+
 .social{
     font-size: 64px;
     text-align: center;
@@ -251,4 +256,9 @@ a{
 
 a:hover{
     cursor: pointer;
+}
+
+.link{
+  text-decoration: underline;
+  color: #062f4f;
 }

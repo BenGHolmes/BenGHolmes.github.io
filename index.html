@@ -72,7 +72,7 @@
             </div>
             <div class="text">
                 <p>
-                    During this past summer, I was lucky enough to participate in the yearly Engineering Physics robot
+                    During this past summer, I participated in the yearly Engineering Physics robot
                     design course. The course is structured as a competition, with the goal being to build a fully
                     autonomous robot that is able to complete the given challenge in just 13 weeks. This year, we had to
                     rescue Ewoks (stuffed animals) from the Empire stronghold by navigating over gaps, differentiating
@@ -84,55 +84,51 @@
                     navigate any similar style of course, even if the specific obstacles changed. My main contribution
                     was implementing a computer vision system that allowed us to do exactly that. A Raspberry Pi on the
                     robot continuously captured images of the course ahead using a fisheye camera, and these photos were
-                    processed using a Python implementation of the extremely fast <a
-                        href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi.
+                    processed using a Python implementation of the extremely fast <a href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi.
                     The raspberry pi would then calculate how much the robot needed to turn in order to face the Ewok,
                     and then pass this information to our main STM32 microcontroller, which controlled the motors.
+                </p>
+                <p>
+                    For a more detailed look at the design of our robot, check out the website that we made for it <a class="link" href="https://axel-jacobsen.github.io/ENPHRobot/" target="_blank">here</a>
                 </p>
             </div>
         </div>
     </div>
     <div class="section-inner" id="ball-sim">
         <h2>Ball Bouncing in a Ball Motion Simulation</h2>
-        <h3>Personal project</h3>
-        <p>
-            Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta
-            porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget
-            lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis
-            tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at
-            nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus
-            ligula.
-        </p>
+        <h3>Personal project (Oct 2018)</h3>
+        <div class="flex-section">
+            <div class="image background">
+                <img src="Images/demo.gif">
+            </div>
+            <div class="text">
+                <p>
+                    Recently, I've been really interested in the field of computational physics. In order to get some experience solving computational problems, I decided to implement the simulation outlined in <a class="link" href="https://web.math.pmf.unizg.hr/nastava/nmf/Lopta.pdf" target="_blank">this paper</a> by Tanner Morrison. The code was written in MATLAB and can be found on my github.
+                </p>
 
-        <p>
-            Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis
-            vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna
-            lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut
-            dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique
-            suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus
-            varius, id porta lacus feugiat. Nullam vel metus eros.
-        </p>
+                <p>
+                    The code performs finite difference analysis to simulate the motion of both balls, and the result of any impacts that occur between them or the container around them. The weight of each ball and the initial position and velocity can all be set to vary the outcome. In the future, I hope to add in friction and rolling, to make the model more accurate.
+                </p>
+            </div>
+        </div>
     </div>
     <div class="section-inner" id="study-app">
         <h2>UBC Solar</h2>
         <h3>Engineering student design team (Sept 2016 - Sept 2017)</h3>
-        <p>
-            Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta
-            porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget
-            lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis
-            tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at
-            nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus
-            ligula.
-        </p>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/raven.jpg">
+            </div>
+            <div class="text">
+                <p>
+                    During my first year at UBC, I was a member of the mechanical design team for UBC Solar, an engineering student team building a solar powered race-car for the Formula Sun Grand Prix.
+                </p>
 
-        <p>
-            Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis
-            vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna
-            lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut
-            dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique
-            suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus
-            varius, id porta lacus feugiat. Nullam vel metus eros.
-        </p>
+                <p>
+                    While working with UBC Solar, I had the opportunity to work independently and in groups to model components in AutoCAD and machine them using a water-jet cutter and a mill, perform finite element analysis using Ansys to evaluate the car's safety, and design the car's battery safety box.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 <section id="experience">
