@@ -241,12 +241,18 @@ h3 {
 }
 
 .social{
-    font-size: 64px;
-    text-align: center;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.social p{
+  margin-top: 8px;
 }
 
 .social i{
-    margin: 16px;
+  font-size: 64px;
 }
 
 a{
@@ -261,4 +267,8 @@ a:hover{
 .link{
   text-decoration: underline;
   color: #062f4f;
+}
+
+li{
+  padding-bottom: 8px;
 }

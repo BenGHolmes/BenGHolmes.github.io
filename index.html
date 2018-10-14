@@ -35,8 +35,18 @@
         <div class="image">
             <img src="Images/Headshot.jpeg">
             <div class="social">
-                <a href="https://www.linkedin.com/in/bengholmes/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/BenGHolmes" target="_blank"><i class="fab fa-github-square"></i></a>
+                <div>
+                    <a href="https://www.linkedin.com/in/bengholmes/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <p>LinkedIn</p>
+                </div>
+                <div>
+                    <a href="https://github.com/BenGHolmes" target="_blank"><i class="fab fa-github-square"></i></a>
+                    <p>GitHub</p>
+                </div>
+                <div>
+                    <a href="files/BenHolmesResume.pdf" target="_blank" title="Resume"><i class="fas fa-file-alt"></i></a>
+                    <p>Resume</p>
+                </div>
             </div>
         </div>
         <div class="text">
@@ -50,7 +60,7 @@
             </p>
             <p>
                 Recently, my main interest has been in the areas of theoretical physics, computational physics, and
-                astronomy. I've recently taken courses in both quantum mechanics and special relativity, and they have
+                astronomy. I've taken courses in both quantum mechanics and special relativity, and they have
                 been by far the most enjoyable courses of my degree. I hope to get more experience in physics research
                 over the coming years to help me narrow down my areas of interest and guide my degree moving forwards.
             </p>
@@ -63,9 +73,62 @@
 </section>
 <section id="projects">
     <h1>Projects</h1>
+    <div class="section-inner" id="sailbot">
+        <h2>UBC Sailbot</h2>
+        <h3>Engineering Student Design Team (Sept 2018 - Present)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/sailbot.jpg">
+            </div>
+            <div class="text">
+                <p>
+                    UBC Sailbot is an engineering student design team that builds autonomous sailboats. The team's first boat, Ada 1.0 attempted to cross the Atlantic Ocean, and set records for the farthest known autonomous sailboat voyage. Our next iteration, Raye, aims to travel from Vancouver Island to the Hawaiian Archipelago in the Vic-Maui race.
+                </p>
+
+                <p>
+                    I'm working on the software team of UBC Sailbot, and my current project involves simulating our newest sailboat, Raye, in various weather conditions so that we can test and debug our control systems before the physical boat is built. In order to do this, we're simulating the ship in Gazebo, and connecting it to the MATLAB control system using the ROS interface.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-inner" id="rc-car">
+        <h2>Self Driving RC Car</h2>
+        <h3>Personal Project (Nov 2017 - Present)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/rc_car.png">
+            </div>
+            <div class="text">
+                <p>
+                    In order to improve my understanding of machine learning and computer vision, I've taken apart an old RC car and added a raspberry pi and a camera to it. My goal is to extend the work that I did on the autonomous rescue robot, in a personal project that doesn't have such a tight time constraint.
+                </p>
+                <p>
+                    So far, I've connected a Raspberry Pi to the RC car and successfully controlled both steering and the throttle by sending commands from my laptop to the Pi over wifi. My next steps will be to use what I learned from the rescue robot project to update the circuitry to allow for more precise steering and throttle controls, and to train a neural network to follow a taped course.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-inner" id="ball-sim">
+        <h2>Ball Bouncing in a Ball Motion Simulation</h2>
+        <h3>Personal Project (Oct 2018)</h3>
+        <div class="flex-section">
+            <div class="image background">
+                <img src="Images/demo.gif">
+            </div>
+            <div class="text">
+                <p>
+                    Recently, I've been really interested in the field of computational physics. In order to get some experience solving computational problems, I decided to implement the simulation outlined in <a class="link" href="https://web.math.pmf.unizg.hr/nastava/nmf/Lopta.pdf" target="_blank">this paper</a> by Tanner Morrison. The code was written in MATLAB and can be found on my github.
+                </p>
+
+                <p>
+                    The code performs finite difference analysis to simulate the motion of both balls, and the result of any impacts that occur between them or the container around them. The weight of each ball and the initial position and velocity can all be set to vary the outcome. In the future, I hope to add in friction and rolling to make the model more accurate.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="section-inner" id="vanessa">
         <h2>Autonomous Rescue Robot with Computer Vision</h2>
-        <h3>Course project (June - Aug 2018)</h3>
+        <h3>Course Project (June - Aug 2018)</h3>
         <div class="flex-section">
             <div class="image">
                 <video src="Images/best_run.mp4" type="video/mp4" controls="true"></video>
@@ -79,14 +142,7 @@
                     between various infrared light signals, and detecting and capturing 5 stuffed Ewoks along the way.
                 </p>
                 <p>
-                    From the beginning, our team decided that we wanted to try to implement a universal solution, that
-                    required no hardcoding or prior knowledge of the course. If successful, our robot would be able to
-                    navigate any similar style of course, even if the specific obstacles changed. My main contribution
-                    was implementing a computer vision system that allowed us to do exactly that. A Raspberry Pi on the
-                    robot continuously captured images of the course ahead using a fisheye camera, and these photos were
-                    processed using a Python implementation of the extremely fast <a href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi.
-                    The raspberry pi would then calculate how much the robot needed to turn in order to face the Ewok,
-                    and then pass this information to our main STM32 microcontroller, which controlled the motors.
+                    From the beginning, our team decided that we wanted to try to implement a universal solution, that required no hardcoding or prior knowledge of the course. In order to achieve this, I implemented a computer vision system that allowed us to navigate directly from Ewok to Ewok, without needing to look for specific course landmarks. A Raspberry Pi on the robot continuously captured images of the course ahead using a fisheye camera, and these photos were processed using a Python implementation of the extremely fast <a class="link" href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi. The raspberry pi would then calculate how much the robot needed to turn in order to face the next Ewok, and then pass this information to our main STM32 microcontroller, which controlled the motors.
                 </p>
                 <p>
                     For a more detailed look at the design of our robot, check out the website that we made for it <a class="link" href="https://axel-jacobsen.github.io/ENPHRobot/" target="_blank">here</a>
@@ -94,27 +150,9 @@
             </div>
         </div>
     </div>
-    <div class="section-inner" id="ball-sim">
-        <h2>Ball Bouncing in a Ball Motion Simulation</h2>
-        <h3>Personal project (Oct 2018)</h3>
-        <div class="flex-section">
-            <div class="image background">
-                <img src="Images/demo.gif">
-            </div>
-            <div class="text">
-                <p>
-                    Recently, I've been really interested in the field of computational physics. In order to get some experience solving computational problems, I decided to implement the simulation outlined in <a class="link" href="https://web.math.pmf.unizg.hr/nastava/nmf/Lopta.pdf" target="_blank">this paper</a> by Tanner Morrison. The code was written in MATLAB and can be found on my github.
-                </p>
-
-                <p>
-                    The code performs finite difference analysis to simulate the motion of both balls, and the result of any impacts that occur between them or the container around them. The weight of each ball and the initial position and velocity can all be set to vary the outcome. In the future, I hope to add in friction and rolling, to make the model more accurate.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="section-inner" id="study-app">
+    <div class="section-inner" id="ubc-solar">
         <h2>UBC Solar</h2>
-        <h3>Engineering student design team (Sept 2016 - Sept 2017)</h3>
+        <h3>Engineering Student Design Team (Sept 2016 - Sept 2017)</h3>
         <div class="flex-section">
             <div class="image">
                 <img src="Images/raven.jpg">
@@ -130,29 +168,60 @@
             </div>
         </div>
     </div>
+    <div class="section-inner" id="cardboard-chair">
+        <h2>Cardboard Chair</h2>
+        <h3>Course Project (Sept - Oct 2016)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/cardboard_chair.png">
+            </div>
+            <div class="text">
+                <p>
+                    My first engineering project at UBC was designing and building a folding cardboard chair. Our team was limited to just one square meter of cardboard and given the goal of supporting as much weight as possible. Our chair performed best in our class, successfully supporting 400 pounds' worth of sandbags!
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 <section id="experience">
     <h1>Work Experience</h1>
     <div class="section-inner" id="blue-willow">
         <h2>Blue Willow Systems</h2>
         <h3>Co-op Software Devloper (Jan - Apr 2018)</h3>
-        <p>
-            Nam ac scelerisque massa. In hac habitasse platea dictumst. Aliquam ligula dolor, mollis ac purus ac, porta
-            porta elit. Ut feugiat finibus feugiat. Proin at ullamcorper ipsum. Nulla viverra pharetra turpis, eget
-            lobortis ante semper tincidunt. Mauris luctus commodo ante, at mollis quam. Donec vulputate, urna quis
-            tincidunt porttitor, leo nisi lobortis diam, nec maximus quam orci quis turpis. Curabitur pharetra ligula at
-            nisi consequat, ut pretium libero auctor. Nulla vitae tincidunt sem. Integer non tempus leo. Nam a tempus
-            ligula.
-        </p>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/blue_willow.png">
+            </div>
+            <div class="text">
+                <p>
+                    During my first co-op placement, I worked for Blue Willow Systems, a startup in Vancouver developing wearables for senior care. The bands track residents' locations, automatically detect falls, and monitor various other aspects of resident health.
+                </p>
 
-        <p>
-            Sed consequat ex sit amet enim hendrerit, luctus pharetra neque egestas. Suspendisse maximus nisl quis
-            vehicula porta. Nunc lorem ipsum, maximus at aliquet vitae, lacinia eget ligula. Mauris quis diam in urna
-            lacinia cursus sed quis justo. Praesent nec mauris a dolor fringilla tincidunt quis sed odio. Nam ut
-            dignissim leo. Pellentesque volutpat dui sed dui varius facilisis. Ut feugiat, urna vitae tristique
-            suscipit, ante leo sagittis dui, vitae mollis diam justo eget nisi. Nunc vehicula neque sit amet metus
-            varius, id porta lacus feugiat. Nullam vel metus eros.
-        </p>
+                <p>
+                    While working at Blue Willow, I:
+                <p>
+                <ul>
+                    <li>
+                        Researched emerging localization technologies and constructed a proof of concept that integrated the new technology with the existing system
+                    </li>
+                    <li>
+                        Implemented front and back-end changes to add several new features to our mobile and desktop customer dashboard
+                    </li>
+                    <li>
+                       Wrote monthly release documents describing what changes were made, and explaining to our non-technical customers how to effectively use any new features
+                    </li>
+                    <li>
+                        Created a custom Android application to be used for live sales demos where our full, cloud-based system could not be set up
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="bottom-padding">
+    <div style="padding: 32px;">
+
     </div>
 </section>
 </body>

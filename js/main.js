@@ -24,7 +24,7 @@ window.onscroll = function() {
     var sections = document.getElementsByTagName("section");
     for (var i = 0; i < sections.length; i++){
       var x = sections[i];
-        if (x.getBoundingClientRect().top - nav_height <= 20) {
+        if (x.getBoundingClientRect().top - nav_height <= 100) {
           current = x;
         }
     }
