@@ -1,56 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-  <title>Ben Holmes</title>
-  <link href="css/main.css" rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <link rel="icon" href="siteIcon.ico" type="image/x-icon"/>
-  <link rel="shortcut icon" href="siteIcon.ico" type="image/x-icon"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script type="text/javascript" src="js/csi.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+    <title>Ben Holmes</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-
 <body>
-  <div class="landing" id="top">
-    <div class="nav-bar">
-      <div class="site-title">
-        <a href="#top">Ben Holmes</a>
-      </div>
-      <div class="menu-buttons" id="mainNav">
-        <ul>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#about-me">About me</a>
-          </li>
-          <li>
-            <a href="files/BenHolmesResume.pdf" target="_blank">Resume</a>
-          </li>
-        </ul>
-      </div>
+<div class="navbar" id="navbar">
+    <a id="name" onclick="goto('top')">Ben Holmes</a>
+    <a class="navBtn" id="experienceBtn" onclick="goto('experience')">Where I've worked</a>
+    <a class="navBtn" id="projectsBtn" onclick="goto('projects')">What I've done</a>
+    <a class="navBtn" id="whoamiBtn" onclick="goto('whoami')">Who I am</a>
+    <a onclick="toggleDropdown()"><i id="burgerMenu" class="fas fa-bars"></i></a>
+</div>
+<div class="dropdownMenu hidden" id="dropdownMenu">
+    <a class="dropdownBtn" id="whoamiDropdown" onclick="dropdownGoto('whoami')">Who I am</a>
+    <a class="dropdownBtn" id="projectsDropdown" onclick="dropdownGoto('projects')">What I've done</a>
+    <a class="dropdownBtn" id="experienceDropdown" onclick="dropdownGoto('experience')">Where I've worked</a>
+</div>
+<div class="intro">
+    <div class="inner">
+        <div class="content">
+            Engineering Physics student at the University of British Columbia, intersted in physics and astronomy
+            research and software development.
+        </div>
     </div>
-    <div class="greeting">
-      <p class="name">Hi, I'm Ben.</p>
-      <p class="education">I'm an Engineering Physics student at the University of British Columbia.</p>
+</div>
+<section id="whoami">
+    <h1>Who I am</h1>
+    <div class="section-inner flex-section">
+        <div class="image">
+            <img src="Images/Headshot.jpeg">
+            <div class="social">
+                <div>
+                    <a href="https://www.linkedin.com/in/bengholmes/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <p>LinkedIn</p>
+                </div>
+                <div>
+                    <a href="https://github.com/BenGHolmes" target="_blank"><i class="fab fa-github-square"></i></a>
+                    <p>GitHub</p>
+                </div>
+                <div>
+                    <a href="files/BenHolmesResume.pdf" target="_blank" title="Resume"><i class="fas fa-file-alt"></i></a>
+                    <p>Resume</p>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <p>
+                Hi, I'm Ben. I'm a third year Engineering Physics student at the University of British Columbia in
+                Vancouver, Canada. I have a passion for physics, software development, and math, and with my endless
+                curiosity and love for problem solving, I hope to build a career in research and academia. I have taken
+                my first step in this direction by pursuing a degree in Engineering Physics, an extremely competitive
+                program that focuses on developing a foundation of high level math and physics knowledge, while also
+                allowing me to customize my degree with a wide range of technical electives.
+            </p>
+            <p>
+                Recently, my main interest has been in the areas of theoretical physics, computational physics, and
+                astronomy. I've taken courses in both quantum mechanics and special relativity, and they have
+                been by far the most enjoyable courses of my degree. I hope to get more experience in physics research
+                over the coming years to help me narrow down my areas of interest and guide my degree moving forwards.
+            </p>
+            <p>
+                In what little free time I have between classes and extracurricular projects, I'm an avid climber,
+                skier, and backpacker, and I dabble in biking, running and photography.
+            </p>
+        </div>
     </div>
-    <div class="contact">
-      <p>
-        <a href="https://github.com/BenGHolmes" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/bengholmes/" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </p>
+</section>
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="section-inner" id="sailbot">
+        <h2>UBC Sailbot</h2>
+        <h3>Engineering Student Design Team (Sept 2018 - Present)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/sailbot.jpg">
+            </div>
+            <div class="text">
+                <p>
+                    UBC Sailbot is an engineering student design team that builds autonomous sailboats. The team's first boat, Ada 1.0 attempted to cross the Atlantic Ocean, and successfully set records for the farthest known autonomous sailboat voyage. Our next iteration, Raye, aims to travel from Vancouver Island to the Hawaiian Archipelago in the Vic-Maui race.
+                </p>
+
+                <p>
+                    I'm working on the software team of UBC Sailbot, and my current project involves simulating our newest sailboat, Raye, in various weather conditions so that we can test and debug our control systems before the physical boat is built. In order to do this, we're simulating the ship in Gazebo, and connecting it to the MATLAB control system using the ROS interface.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <span class="anchor" id="projects"></span>
-  <div data-include="sections/vanessa.html"></div>
-  <div data-include="sections/study-app.html"></div>
-  <div data-include="sections/key-chain.html"></div>
-  <span class="anchor" id="about-me"></span>
-  <div data-include="sections/about-me.html"></div>
+    <div class="section-inner" id="rc-car">
+        <h2>Self Driving RC Car</h2>
+        <h3>Personal Project (Nov 2017 - Present)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/rc_car.png">
+            </div>
+            <div class="text">
+                <p>
+                    In order to improve my understanding of machine learning and computer vision, I've taken apart an old RC car and added a raspberry pi and a camera to it. My goal is to extend the work that I did on the autonomous rescue robot, in a personal project that doesn't have such a tight time constraint.
+                </p>
+                <p>
+                    So far, I've connected a Raspberry Pi to the RC car and successfully controlled both steering and the throttle by sending commands from my laptop to the Pi over wifi. My next steps will be to use what I learned from the rescue robot project to update the circuitry to allow for more precise steering and throttle controls, and to train a neural network to follow a taped course.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-inner" id="wikibot">
+        <h2>WikiGame Bot</h2>
+        <h3>Personal Project (Nov 2018)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/wikimediaglobe.jpg">
+            </div>
+            <div class="text">
+                <p>
+                    The WikiGame is a game where players race to find the fastest path between two random Wikipedia pages by following links in articles. To guarantee that I always beat my friends, I decided to build a bot to play using a graph of all connected Wikipedia pages, rather than guessing what the fastest path is myself.
+                </p>
+
+                <p>
+                    I downloaded the latest Wikipedia XML dump (a 50GB xml file), pulled all the links from every Wikipedia page, and stored them in a SQL database for quick access during games. I then used Selenium to interact with the game itself and follow the links on the pages. When a game starts, the bot grabs the start and end pages, and does a breadth first search of the graph to find the 20 fastest paths between the two pages (you get extra points for repeated wins within the time limit). I then quickly follow the links, completing as many paths as possible within the two minute time limit. The bot regularly scores 5-10x higher than its human opponents, and you can find it at the very top of the scoreboard at <a href="https://www.thewikigame.com/group" target="_blank">thewikigame.com</a> (the username is "TheBeast").
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-inner" id="ball-sim">
+        <h2>Ball Bouncing in a Ball Motion Simulation</h2>
+        <h3>Personal Project (Oct 2018)</h3>
+        <div class="flex-section">
+            <div class="image background">
+                <img src="Images/demo.gif">
+            </div>
+            <div class="text">
+                <p>
+                    Recently, I've been really interested in the field of computational physics. In order to get some experience solving computational problems, I decided to implement the simulation outlined in <a class="link" href="https://web.math.pmf.unizg.hr/nastava/nmf/Lopta.pdf" target="_blank">this paper</a> by Tanner Morrison. The code was written in MATLAB and can be found on my github.
+                </p>
+
+                <p>
+                    The code performs finite difference analysis to simulate the motion of both balls, and the result of any impacts that occur between them or the container around them. The weight of each ball and the initial position and velocity can all be set to vary the outcome. In the future, I hope to add in friction and rolling to make the model more accurate.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-inner" id="vanessa">
+        <h2>Autonomous Rescue Robot with Computer Vision</h2>
+        <h3>Course Project (June - Aug 2018)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <video src="Images/best_run.mp4" type="video/mp4" controls="true"></video>
+            </div>
+            <div class="text">
+                <p>
+                    During this past summer, I participated in the yearly Engineering Physics robot
+                    design course. The course is structured as a competition, with the goal being to build a fully
+                    autonomous robot that is able to complete the given challenge in just 13 weeks. This year, we had to
+                    rescue Ewoks (stuffed animals) from the Empire stronghold by navigating over gaps, differentiating
+                    between various infrared light signals, and detecting and capturing 5 stuffed Ewoks along the way.
+                </p>
+                <p>
+                    From the beginning, our team decided that we wanted to try to implement a universal solution, that required no hardcoding or prior knowledge of the course. In order to achieve this, I implemented a computer vision system that allowed us to navigate directly from Ewok to Ewok, without needing to look for specific course landmarks. A Raspberry Pi on the robot continuously captured images of the course ahead using a fisheye camera, and these photos were processed using a Python implementation of the extremely fast <a class="link" href="https://pjreddie.com/darknet/yolov2/" target="_blank">YOLO</a> network, running on the Pi. The raspberry pi would then calculate how much the robot needed to turn in order to face the next Ewok, and then pass this information to our main STM32 microcontroller, which controlled the motors.
+                </p>
+                <p>
+                    For a more detailed look at the design of our robot, check out the website that we made for it <a class="link" href="https://axel-jacobsen.github.io/ENPHRobot/" target="_blank">here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-inner" id="ubc-solar">
+        <h2>UBC Solar</h2>
+        <h3>Engineering Student Design Team (Sept 2016 - Sept 2017)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/raven.jpg">
+            </div>
+            <div class="text">
+                <p>
+                    During my first year at UBC, I was a member of the mechanical design team for UBC Solar, an engineering student team building a solar powered race-car for the Formula Sun Grand Prix.
+                </p>
+
+                <p>
+                    While working with UBC Solar, I had the opportunity to work independently and in groups to model components in AutoCAD and machine them using a water-jet cutter and a mill, perform finite element analysis using Ansys to evaluate the car's safety, and design the car's battery safety box.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section-inner" id="cardboard-chair">
+        <h2>Cardboard Chair</h2>
+        <h3>Course Project (Sept - Oct 2016)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/cardboard_chair.png">
+            </div>
+            <div class="text">
+                <p>
+                    My first engineering project at UBC was designing and building a folding cardboard chair. Our team was limited to just one square meter of cardboard and given the goal of supporting as much weight as possible. Our chair performed best in our class, successfully supporting 400 pounds' worth of sandbags!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="experience">
+    <h1>Work Experience</h1>
+    <div class="section-inner" id="blue-willow">
+        <h2>Blue Willow Systems</h2>
+        <h3>Co-op Software Devloper (Jan - Apr 2018)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/blue_willow.png">
+            </div>
+            <div class="text">
+                <p>
+                    During my first co-op placement, I worked for Blue Willow Systems, a startup in Vancouver developing wearables for senior care. The bands track residents' locations, automatically detect falls, and monitor various other aspects of resident health.
+                </p>
+
+                <p>
+                    While working at Blue Willow, I:
+                <p>
+                <ul>
+                    <li>
+                        Researched emerging localization technologies and constructed a proof of concept that integrated the new technology with the existing system
+                    </li>
+                    <li>
+                        Implemented front and back-end changes to add several new features to our mobile and desktop customer dashboard
+                    </li>
+                    <li>
+                       Wrote monthly release documents describing what changes were made, and explaining to our non-technical customers how to effectively use any new features
+                    </li>
+                    <li>
+                        Created a custom Android application to be used for live sales demos where our full, cloud-based system could not be set up
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="bottom-padding">
+    <div style="padding: 32px;">
+
+    </div>
+</section>
 </body>
+</html>
