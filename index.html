@@ -108,6 +108,24 @@
             </div>
         </div>
     </div>
+    <div class="section-inner" id="wikibot">
+        <h2>WikiGame Bot</h2>
+        <h3>Personal Project (Nov 2018)</h3>
+        <div class="flex-section">
+            <div class="image">
+                <img src="Images/wikimediaglobe.jpg">
+            </div>
+            <div class="text">
+                <p>
+                    The WikiGame is a game where players race to find the fastest path between two random Wikipedia pages by following links in articles. To guarantee that I always beat my friends, I decided to build a bot to play using a graph of all connected Wikipedia pages, rather than guessing what the fastest path is myself.
+                </p>
+
+                <p>
+                    I downloaded the latest Wikipedia XML dump (a 50GB xml file), pulled all the links from every Wikipedia page, and stored them in a SQL database for quick access during games. I then used Selenium to interact with the game itself and follow the links on the pages. When a game starts, the bot grabs the start and end pages, and does a breadth first search of the graph to find the 20 fastest paths between the two pages (you get extra points for repeated wins within the time limit). I then quickly follow the links, completing as many paths as possible within the two minute time limit. The bot regularly scores 5-10x higher than its human opponents, and you can find it at the very top of the scoreboard at <a href="https://www.thewikigame.com/group" target="_blank">thewikigame.com</a> (the username is "TheBeast").
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="section-inner" id="ball-sim">
         <h2>Ball Bouncing in a Ball Motion Simulation</h2>
         <h3>Personal Project (Oct 2018)</h3>
