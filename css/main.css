@@ -42,28 +42,35 @@ html, body {
   padding: 0px;
   margin: 0px;
 }
-.nav-btn{
-  position: absolute;
+
+#open-nav-btn{
+  position: fixed;
   top: 2rem;
   left: 4rem;
 }
 
 #close-nav-btn{
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+}
+
+#close-nav-btn i{
   color: var(--menu-text);
   font-size: 3rem;
 }
 
-#close-nav-btn:hover{
+#close-nav-btn i:hover{
   color: var(--menu-text-hover);
   cursor: pointer
 }
 
-#open-nav-btn{
+#open-nav-btn i{
   color: var(--menu-btn);
   font-size: 3rem;
 }
 
-#open-nav-btn:hover{
+#open-nav-btn i:hover{
   color: var(--menu-btn-hover);
   cursor: pointer;
 }
@@ -111,4 +118,8 @@ html, body {
   font-weight: lighter;
   font-style: oblique;
   font-size: 2rem;  
+}
+
+.gone{
+  display: none;
 }
