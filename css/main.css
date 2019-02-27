@@ -101,3 +101,14 @@ html, body {
   color: var(--menu-text-hover);
   cursor: pointer;
 }
+
+.links{
+  padding-top: 2rem;
+}
+
+.links a{
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  font-weight: lighter;
+  font-style: oblique;
+  font-size: 2rem;  
+}
