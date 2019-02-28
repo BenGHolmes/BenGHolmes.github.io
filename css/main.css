@@ -1,7 +1,8 @@
 
 :root {
   --menu-background: #B82601;
-  --menu-btn: #fff;
+  --menu-btn-light: #fff;
+  --menu-btn-dark: #000;
   --menu-btn-hover: #a5a5a5;
   --menu-text: #a5a5a5;
   --menu-text-hover: #fff;
@@ -13,6 +14,7 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
+  font-weight: lighter;
 }
 
 .landing{
@@ -32,7 +34,7 @@ html, body {
 
 #name{
   font-size: 4rem;
-  font-weight: bold;
+  font-weight: normal;
   padding: 0px;
   margin-bottom: 0.5rem;
 }
@@ -66,7 +68,6 @@ html, body {
 }
 
 #open-nav-btn i{
-  color: var(--menu-btn);
   font-size: 3rem;
 }
 
@@ -104,7 +105,7 @@ html, body {
   transition: 0.3s;
 }
 
-.menu-content a:hover, .menu-content a:focus {
+.menu-content a:hover{
   color: var(--menu-text-hover);
   cursor: pointer;
 }
@@ -122,4 +123,56 @@ html, body {
 
 .gone{
   display: none;
+}
+
+.dark{
+  color: var(--menu-btn-dark) !important;
+}
+
+.light{
+  color: var(--menu-btn-light) !important;
+}
+
+.page-title{
+  font-size: 3rem;
+  position: absolute;
+  top: 2rem;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  text-decoration: underline;
+  text-decoration-color: var(--menu-background);
+}
+
+.page-content{
+  position: absolute;
+  top: 10rem;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.headshot{
+  display: block;
+  float: left;
+  flex: 1;
+  flex-wrap: wrap;
+  min-width: 300px;
+  max-width: 500px;
+  padding-right: 2rem;
+}
+
+.headshot img{
+  width: 100%
+}
+
+.about-text{
+  display: block;
+  float: right;
+  flex: 2;
+  min-width: 300px;
+}
+
+.about-text p{
+  margin-top: 0;
 }
