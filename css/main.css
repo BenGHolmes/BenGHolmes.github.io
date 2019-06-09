@@ -88,7 +88,7 @@ html, body {
   width: 50%;
   float: left;
   border: 1px solid #d4d4d4;
-  border-radius: 2px;
+  border-radius: 20px;
   padding: 20px;
   position: relative;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
@@ -100,11 +100,11 @@ margin-top: -60px;
 }
 
 .timeline > li:not(.timeline-inverted) {
-padding-right:90px;
+padding-right:70px;
 }
 
 .timeline > li.timeline-inverted {
-padding-left:90px;
+padding-left:70px;
 }
 .timeline > li > .timeline-panel:before {
   position: absolute;
@@ -130,15 +130,15 @@ padding-left:90px;
 }
 .timeline > li > .timeline-badge {
   color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   font-size: 1.4em;
   text-align: center;
   position: absolute;
-  top: 16px;
+  top: 32px;
   left: 50%;
-  margin-left: -25px;
+  margin-left: -10px;
   background-color: #999999;
   z-index: 100;
   border-top-right-radius: 50%;
@@ -162,22 +162,7 @@ padding-left:90px;
   right: auto;
 }
 
-.timeline > li > .multibadge {
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.4em;
-  text-align: center;
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  margin-left: -25px;
-  background-color: #999999;
-  z-index: 100;
-}
-
-.timeline-badge-ex {
+.timeline-category {
   color: #fff;
   width: 50px;
   height: 50px;
@@ -192,41 +177,57 @@ padding-left:90px;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   display: inline-block;
+  margin: 16px 0;
+  margin-right: 16px;
 }
 
-.timeline-badge-ex.gen {
-  background-color: #595959 !important;
+.timeline-category.me {
+  background-color: #ab8000 !important;
 }
-.timeline-badge-ex.sw {
+.timeline-category.sw {
   background-color: #008080 !important;
 }
-.timeline-badge-ex.ml {
-  background-color: #ffc001 !important;
+.timeline-category.ml {
+  background-color: #802000 !important;
 }
-.timeline-badge-ex.ds {
-  background-color: #ff0084 !important;
-}
-
-.timeline-badge.gen {
-  background-color: #595959 !important;
-}
-.timeline-badge.sw {
-  background-color: #008080 !important;
-}
-.timeline-badge.ml {
-  background-color: #ffc001 !important;
-}
-.timeline-badge.ds {
-  background-color: #ff0084 !important;
+.timeline-category.ds {
+  background-color: #470287 !important;
 }
 
 .timeline-title {
   margin-top: 0;
   color: inherit;
+  margin-bottom: 2px;
+}
+
+.timeline-date {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #888;
+}
+
+.timeline-img {
+  padding: 0 !important;
+  margin-bottom: 16px;
 }
 
 .timeline-img img, video{
   width: 100%;
+}
+
+.timeline-body {
+  margin-top: 0;
+  padding: 0 !important;
+}
+
+.timeline-links {
+  margin-top: 16px;
+}
+
+.timeline-links a {
+  text-decoration: none;
+  color: #000;
+  padding-right: 16px;
 }
 
 .timeline-body > p,
@@ -240,4 +241,81 @@ padding-left:90px;
 #icon-legend div {
   border-bottom: #000 2px;
   padding-bottom: 16px;
+}
+
+.jumbotron {
+  background-color: #FFF !important;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.grid-title {
+  margin-top: 0;
+  color: inherit;
+  margin-bottom: 2px;
+}
+
+.grid-date {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #888;
+}
+
+.grid-img {
+  padding: 0 !important;
+  margin-bottom: 16px;
+}
+
+.grid-img img, video{
+  width: 100%;
+}
+
+.grid-body {
+  margin-top: 0;
+  padding: 0 !important;
+}
+
+.grid-links {
+  margin-top: 16px;
+}
+
+.grid-links a {
+  text-decoration: none;
+  color: #000;
+  padding-right: 16px;
+}
+
+.grid-body > p,
+.grid-body > ul {
+  margin-bottom: 0;
+}
+.grid-body > p + p {
+  margin-top: 5px;
+}
+
+#about-me-lg {
+  background: url(../Images/frosty_mountain_headshot.png) no-repeat 50% 80%;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  margin: 0 !important;
+  display: inline-grid;
+  border-radius: 20px;
+}
+
+#about-text-lg {
+  background-color: rgba(56,56,56, 0.75);
+  color: #fff;
+  padding: 32px;
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin-left: 32px;
+}
+
+#about-text-lg p:last-child{
+  padding-bottom: 0;
 }
