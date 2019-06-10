@@ -218,16 +218,21 @@ padding-left:70px;
 .timeline-body {
   margin-top: 0;
   padding: 0 !important;
+  font-size: 16px;
 }
 
 .timeline-links {
-  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .timeline-links a {
   text-decoration: none;
   color: #000;
   padding-right: 16px;
+}
+
+.timeline-links a:hover {
+  cursor: pointer;
 }
 
 .timeline-body > p,
@@ -246,7 +251,7 @@ padding-left:70px;
 .jumbotron {
   background-color: #FFF !important;
   border: 1px solid #d4d4d4;
-  border-radius: 2px;
+  border-radius: 20px !important;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
@@ -306,7 +311,7 @@ padding-left:70px;
 }
 
 #about-text-lg {
-  background-color: rgba(56,56,56, 0.75);
+  background-color: rgba(0,0,0, 0.75);
   color: #fff;
   padding: 32px;
   border-radius: 20px;
@@ -314,8 +319,47 @@ padding-left:70px;
   vertical-align: middle;
   float: none;
   margin-left: 32px;
+  padding-bottom: 0;
 }
 
-#about-text-lg p:last-child{
+#about-text-xs {
+  color: #000;  
+}
+
+#about-img-xs img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#about-img-xs {
+  padding-bottom: 16px; 
+}
+
+
+#about-text-lg p {
+  font-size: 16px;
+} 
+
+#about-text-lg p:last-child {
   padding-bottom: 0;
+}
+
+a:hover {
+  cursor: pointer !important;
+}
+
+.social {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.social p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.social i {
+  font-size: 64px;
 }
