@@ -114,14 +114,23 @@
 					event.preventDefault();
 					event.stopPropagation();
 
-					// Hide.
+					if ($(this).attr('target') === '_blank') {
+						// Hide.
 						$menu._hide();
 
-					// Redirect.
+						// Redirect.
+						window.setTimeout(function() {
+							window.open(href);
+						}, 350);
+					} else {
+						// Hide.
+						$menu._hide();
+
+						// Redirect.
 						window.setTimeout(function() {
 							window.location.href = href;
 						}, 350);
-
+					}
 				});
 
 		$body
