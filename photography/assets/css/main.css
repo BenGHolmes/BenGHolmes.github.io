@@ -3636,59 +3636,9 @@ input, select, textarea {
 
 	.wrapper {
 		background-color: #2e3141;
-		margin: 6.5em 0;
+		margin: 0 0;
 		position: relative;
 	}
-
-		.wrapper:before, .wrapper:after {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232e3141%3B' /%3E%3C/svg%3E");
-		}
-
-		.wrapper:before {
-			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
-		}
-
-		.wrapper:after {
-			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
-		}
-
-		.wrapper:before, .wrapper:after {
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			content: '';
-			display: block;
-			height: 6.5em;
-			position: absolute;
-			width: 100%;
-		}
-
-		.wrapper:before {
-			left: 0;
-			top: -6.5em;
-		}
-
-		.wrapper:after {
-			-moz-transform: scaleY(-1);
-			-webkit-transform: scaleY(-1);
-			-ms-transform: scaleY(-1);
-			transform: scaleY(-1);
-			bottom: -6.5em;
-			left: 0;
-		}
-
-		.wrapper.alt:before {
-			-moz-transform: scaleX(-1);
-			-webkit-transform: scaleX(-1);
-			-ms-transform: scaleX(-1);
-			transform: scaleX(-1);
-		}
-
-		.wrapper.alt:after {
-			-moz-transform: scaleY(-1) scaleX(-1);
-			-webkit-transform: scaleY(-1) scaleX(-1);
-			-ms-transform: scaleY(-1) scaleX(-1);
-			transform: scaleY(-1) scaleX(-1);
-		}
 
 		.wrapper .inner {
 			padding: 5em 0 2em 0 ;
@@ -4014,6 +3964,92 @@ input, select, textarea {
 			}
 
 		}
+
+/* Images */
+img {
+	height: 149px;
+	width: auto;
+	margin: 20px;
+	cursor: pointer;
+  }
+  
+  .wrap {
+	max-height: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	margin: 40px;
+  }
+  
+  .image_group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: cente;
+  }
+  
+  .title {
+	margin: 20px 0 0 20px;
+	font-family: "Inconsolata";
+	font-size: 30px;
+  }
+  
+  #popup {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .modal {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	padding-top: 4em;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #2e3141;
+  }
+
+.modal .close {
+	background-image: url("images/close.svg");
+	background-position: 75% 25%;
+	background-repeat: no-repeat;
+	background-size: 2em 2em;
+	border: 0;
+	content: '';
+	display: block;
+	height: 4em;
+	overflow: hidden;
+	position: absolute;
+	right: 2em;
+	text-align: center;
+	text-indent: 4em;
+	top: 4em;
+	width: 4em;
+}
+  
+  #modal-img {
+	margin: auto;
+	display: block;
+	padding: 3em 2em 0 2em;
+	width: auto;
+	height: auto;
+	max-height: 80%;
+	max-width: 90%;
+  }
+  
+  #caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ffffff;
+	padding: 1em 0;
+	height: 150px;
+	font-family: "Inconsolata";
+  }
 
 /* Footer */
 

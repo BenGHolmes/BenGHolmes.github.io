@@ -4164,3 +4164,16 @@ input, select, textarea {
 		}
 
 	}
+
+.no-pad {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.lighter {
+	font-weight: lighter;
+}
+
+h4 {
+	font-size: 0.8em;
+}
