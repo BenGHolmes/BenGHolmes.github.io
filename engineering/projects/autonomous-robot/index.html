@@ -55,29 +55,23 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+									<h3 class="major">The Problem</h3>
+									<img class='inline-img' src="images/course.png"/>
+									<p>Four Ewoks and Chewbacca are trapped in an Empire Stronghold! We need to build an autonomous robot to go retrieve them, or at least retrieve more than our classmates so we win the competition. Doing so involves navigating over gaps, ramps and step-ups, responding to different IR frequencies on the course (to avoid the storm troopers), and finally spotting and retrieving the prisoners.</p>
+									<p>The diagram above is of the competition surface and shows the positions of the Ewoks and Chewbacca, the gaps that we had to cross, and the position and direction of the IR sensors.</p>
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+									<h3 class="major">Mechanical Design</h3>
+									<img class="inline-img" src="../../images/vanessa.png"/>
+									<p>WIDBAT. When In Doubt, Build A Tank. And that's exactly what we did. We took our inspiration from WWI tanks crossing trenches, and angled the front of our tracks so we could climb over the gaps and step-ups. The final product was a beast. We used four, geared-down DC motors PER SIDE, to give us the torque needed to pull the weight of the chassis, batteries and electronics over the step-up. These motors were mounted in between two sheets of aluminum that sat inside the tracks, which freed up the space between the tracks for all of the batteries and electronics. Towards the front sat the polycarbonate arm and camera mount. Finally, our basket sat on top with a hook that could be connected to the zip line after rescuing Chewbacca; returning our friends to safety.</p>
 
-									<h3 class="major">Vitae phasellus</h3>
+									<h3 class="major">Electrical Design</h3>
 									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
+									<h3 class="major">Software</h3>
+									<p>  To navigate towards the Ewoks, we used a camera, a Raspberry Pi, and an implementation of the <a href="https://pjreddie.com/darknet/yolo/" target="_blank">YOLO</a> algorithm for object localization. The rest of the robot was controlled by an STM32 micro-controller, which was responsible for the PID motor control, measuring the IR beacon, edge detection, and actuating the claw and basket.</p>
 
+									<h3 class="major">Competition Day and Takeaways</h3>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 								</div>
 							</div>
 

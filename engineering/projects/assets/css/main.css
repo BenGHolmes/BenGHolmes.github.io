@@ -3718,6 +3718,13 @@ input, select, textarea {
 			width: 55em;
 		}
 
+		.wrapper .inner .inline-img {
+			width: 50%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		.wrapper.style2 {
 			background-color: #353849;
 		}
@@ -3963,6 +3970,10 @@ input, select, textarea {
 					width: 100%;
 				}
 
+				.wrapper .inner .inline-img{
+					width: 50%;
+				}
+
 				.wrapper.spotlight .image {
 					margin: 0 2em 2em 0;
 					width: 32em;
@@ -3995,6 +4006,10 @@ input, select, textarea {
 
 				.wrapper .inner {
 					padding: 2em 2em 0.1em 2em ;
+				}
+
+				.wrapper .inner .inline-img{
+					width: 100%;
 				}
 
 				.wrapper.spotlight .inner {
@@ -4033,6 +4048,10 @@ input, select, textarea {
 
 			.wrapper .inner {
 				padding: 2em 1.5em 0.1em 1.5em ;
+			}
+
+			.wrapper .inner .inline-img{
+				width: 100%;
 			}
 
 		}
