@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-	Solid State by HTML5 UP
+	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Ben Holmes | Home</title>
+		<title>Ben Holmes</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,108 +14,132 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="#">Ben Holmes</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
+						<span class="logo"><img src="images/wedding_headshot.jpg" alt="" /></span>
+						<h1>Ben Holmes</h1>
+						<ul class="icons">
+							<li><a href="https://github.com/bengholmes" target="_blank" class="icon brands fa-github alt"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/bengholmes/" taget="_blank" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						<p>Fifth year <span style="color: white; font-weight: bold;">Engineering Physics</span> student at the <span style="color: white; font-weight: bold;"> University of British Columbia</span><br/>
+						interested in  <span style="color: white; font-weight: bold;">math</span>, <span style="color: white; font-weight: bold;">computer science</span>, and <span style="color: white; font-weight: bold;">machine learning</span>.</p>
 					</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="#">Home</a></li>
-								<li><a href="#about-me">About</a></li>
-								<li><a href="engineering/">Engineering</a></li>
-								<li><a href="photography/">Photography</a></li>
-								<li><a href="BenHolmesResume.pdf" target="_blank" style="padding-top: 2em; font-style: italic">Resume</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<!-- <li><a href="#about-me" class="active">About Me</a></li> -->
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#work">Work</a></li>
+							<li id="resume"><a href="BenHolmesResume.pdf" target="_blank">Resume</a></li>
+						</ul>
 					</nav>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><img class="headshot" src="images/wedding_headshot.jpg" alt=""/></div>
-							<h2>Hi, I'm Ben.</h2>
-							<p>Skier, climber, biker. Engineering Physics student. Aspiring photographer.</p>
-						</div>
-					</section>
+				<!-- Main -->
+					<div id="main">
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+						<!-- TODO: About me section -->
 
-						<!-- About -->
-							<section id="about-me" class="wrapper spotlight style1">
-								<div class="inner">
-									<a class="image"><img src="images/frosty_headshot.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">About Me</h2>
-										<p>
-											As an avid skier, climber, and biker, I plan to apply my engineering experience to develop new products for the outdoors industry, or to work on projects that help preserve the outdoors and allow people to enjoy it sustainably.
-										</p>
-										<p>
-											In order to achieve this goal, I’m currently pursuing a degree in Engineering Physics: a highly competitive program that covers software development and mechanical and electrical design, built on a strong foundation of high level math and physics knowledge. These tools, combined with my curiosity and love for problem solving, allow me to reason from first principals to create novel, practical solutions to challenging and exciting problems.
-										</p>
-									</div>
-								</div>
+						<!-- Projects -->
+							<section id="projects" class="main">
+								<header class="major">
+									<h2>Projects</h2>
+								</header>
+
+								<H3>AlphaFour</H3>
+								<p>Currently building a lightweight version of DeepMind's AlphaGo Zero algorithm to master Connect Four. You can follow my progress on Github below.</p>
+								<ul class="icons">
+									<li><a href="https://github.com/bengholmes/AlphaFour" target="_blank" class="icon brands fa-github alt" style="color: white;"><span class="label">Github</span></a></li>
+								</ul>
+								<div class="hrule"></div>
+
+								<h3>Hyperparameter Tuner</h3>
+								<p>Fourth-year capstone project. Developed a hyperparameter tuner for a local fintech company, Finn AI. Written in Python and using Bayesian optimization under the hood.</p>
+								<div class="hrule"></div>
+
+								<h3>Autonomous Robot</h3>
+								<p>Designed and built an autonomous robot from scratch in just four months. The robot used a version of the YOLO object detection algorithm running on a Raspberry Pi to navigate towards and retrieve targets scattered around a complex and dynamic course. More information about the challenge and my group's solution can be found at the link below.</p>
+								<ul class="icons">
+									<li><a href="https://axel-jacobsen.github.io/ENPHRobot/" target="_blank" class="icon solid fa-external-link-alt alt" style="color: white;"><span class="label">Github</span></a></li>
+								</ul>
+								<div class="hrule"></div>
+
+								<h3>Atari Pong Deep RL Agent</h3>
+								<p>Using deep reinforcement learning to play Pong. Term project for a masters course on deep learing taken during an exchange semester at the Technical University of Denmark in Copenhagen. Used a novel approach for representing the game state and designing the network, rather than the standard CNN approach taken by a majority of my peers.</p>
+								<div class="hrule"></div>
+
+								<h3>Oh Hell Bidder</h3>
+								<p>A probabalistic bidder for the card game <a href="https://en.wikipedia.org/wiki/Oh_Hell" target="_blank">Oh Hell</a>. Averages the results from thousands of random walks to determine an expected number of tricks taken, and then recommends a corresponding bid. Currently undefeated. See the code on Github.</p>
+								<ul class="icons">
+									<li><a href="https://github.com/bengholmes/OhHellBidder" target="_blank" class="icon brands fa-github alt" style="color: white;"><span class="label">Github</span></a></li>
+								</ul>
+								<div class="hrule"></div>
+
+								<h3>WikiGameBot</h3>
+								<p>Used Java to parse a Wikipedia data dump and create a directed graph of all links between pages. Wrote a bot in Java that uses Selenium to play an online game where players race between two random Wikipedia pages by following links in the articles. Regularly scores 5-10x higher than its human opponents. See the code on Github.</p>
+								<ul class="icons">
+									<li><a href="https://github.com/bengholmes/WikiGameBot" target="_blank" class="icon brands fa-github alt" style="color: white;"><span class="label">Github</span></a></li>
+								</ul>
 							</section>
 
-						<!-- Engineering -->
-							<section id="engineering-preview" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/python-code-square.jpeg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Engineering</h2>
-										<p>Check out my personal projects, course assignments, and previous work experience.</p>
-										<a href="engineering/" class="special">Learn more</a>
-									</div>
-								</div>
+						<!-- Second Section -->
+							<section id="work" class="main special">
+								<header class="major">
+									<h2>Work</h2>
+								</header>
+								
+								<h3>Specialized Bicycle Components</h3>
+								<h4>Applied Technologies Intern | January 2020 - Present</h4>
+								<ul>
+									<li>Used a dataset of over 6000 Strava rides to study temperature's effect on race performance and rider power output.</li>
+									<li>Developed a physics model of our electric E-bikes to estimate battery range under a variety of conditions.</li>
+									<li>Wrote a general algorithm for solving kinematics of any full-suspension bicycle using Newton-Raphson iteration. Reduced algorithm runtime by an order of magnitude compared to existing, bike-specific approach.</li>
+									<li>Designed a new database for our R&D bike data and built a Go API for interfacing with it.</li>
+									<li>Built a prototype digital bicycle pump with 0.1psi accuracy, signal processing to remove noise during pump strokes, and six-month battery life.</li>
+								</ul>
+								<div class="hrule"></div>
+
+								<h3>Castleton Commodities</h3>
+								<h4>Co-op Quantitative Analyst | May - August 2019</h4>
+								<ul>
+									<li>Used Python and Dask to perform data exploration on a large dataset (over 100GB) to verify industry priors about freeze-offs — a poorly understood but crucial factor in the price of natural gas markets.</li>
+									<li>Developed, trained, and validated machine learning models using Python and Scikit Learn to predict natural gas production as a function of multiple variables.</li>
+									<li>Documented research process and results, and presented my findings to the data science and trading teams.</li>
+									<li>Wrote Python script to process trade tick data into daily indexes that were more accurate than the ones given by the exchanges.</li>
+								</ul>
+								<div class="hrule"></div>
+
+								<h3>Blue Willow Systems</h3>
+								<h4>Co-op Software Engineer | January-May 2018</h4>
+								<ul>
+									<li>Researched emerging localization technologies and wrote Python algorithms for a proof of concept that integrated the new technology with our existing system.</li>
+									<li>Tested and iterated on filtering algorithms to reduce location error from 4 meters to less than 1 meter.</li>
+									<li>Implemented front-end, back-end, and SQL database changes to production web and mobile applications which added new features including an incident report system and a company-wide announcements board for customers.</li>
+									<li>Wrote a custom Android application that used bluetooth to showcase company technology during sales meetings when the full, cloud-based system could not be installed.</li>
+								</ul>
 							</section>
 
-						<!-- Photography -->
-							<section id="photography-preview" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/frosty_trees_preview.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Photography</h2>
-										<p>A collection of some of my favorite shots! More added all the time as I keep exploring.</p>
-										<a href="photography/" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
+ 							<!-- TODO: Education? -->
+
+							<!-- TODO: Some sort of contact info -->
+
+					</div>
 
 				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Interested in collaborating on a project? Work in the outdoors industry (or know someone who does) and feel like chatting about your experience? Need a climbing partner, an avalanche safety buddy, or someone to take another share of driving the shuttle? I'd love to hear from you!</p>
-						
-							<ul class="contact">
-								<li class="icon solid fa-file-alt"><a href="BenHolmesResume.pdf" target="_blank">Resume</a></li>
-								<li class="icon solid fa-envelope"><a href="mailto:ben.holmes@shaw.ca">ben.holmes@shaw.ca</a></li>
-								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/bengholmes/" target="_blank">LinkedIn.com/in/BenGHolmes</a></li>
-								<li class="icon brands fa-github"><a href="https://github.com/BenGHolmes" target="_blank">Github.com/BenGHolmes</a></li>
-								<li class="icon brands fa-instagram"><a href="https://www.instagram.com/BenGHolmes/" target="_blank">instagram.com/BenGHolmes</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Ben Holmes. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+					<footer id="footer">
+						<p class="copyright">&copy; Ben Holmes. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
 
 			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
